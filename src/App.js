@@ -1,25 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
+import Header from "./components/Header"
+import Main from "./components/Main"
+import Footer from './components/Footer'
+import CounterSample from "./samples/CounterSample"
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+    let  headerText="Merhaba ben headertext ve App.js üzerinden prop olarak geldim."
+    let  mainText="Merhaba ben maintext ve App.js üzerinden prop olarak geldim."
+    let  footerText="Merhaba ben footertext ve App.js üzerinden prop olarak geldim."
+
+    return (
+        <div>
+            <Header yazi ={headerText}></Header>
+            <Main yazi2={mainText}/>
+            <Footer footerText={footerText} age={18} city={"Istanbul"} cities={["ist","ankara"]} />
+            <CounterSample />
+        </div>
+    );
 }
 
 export default App;
